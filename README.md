@@ -5,4 +5,4 @@ Visualization:
 
 <img src="sample_inbox.png" width="50%" />
 
-See the [Code.js file](Code.js) for a description and implementation guide.
+To implement, create a Google Apps Script and copy/paste the [Code.js file](Code.js) into the Script. See the file for information about what to do with it once it's in the Script.
