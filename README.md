@@ -1,4 +1,7 @@
 # gmail-date-received
-Apply labels to messages in Gmail inbox by how recently you received them.
+Automatically apply labels to messages in your Gmail inbox by how recently you received them.
+
+Visualization of the application:
+<img src="sample_inbox.png" width="75%" />
 
 See the instructions and description in the [Code.js file](Code.js).
