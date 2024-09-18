@@ -1,4 +1,4 @@
-# gmail-date-received
+# gmail-date-received-labels
 Automatically apply labels to messages in your Gmail inbox by how recently you received them.
 
 Visualization:
