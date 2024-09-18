@@ -3,7 +3,7 @@ Adapted from https://www.gmass.co/blog/add-needs-reply-label/
 
 
 INSTRUCTIONS FOR PERSONALIZATION:
-Write your email inside the quotes on line 36.
+Write your email inside the quotes where we define the my_email variable inside the definition of the main() function.
 
 
 LABELS TO HAVE IN GMAIL (or re-write this code for the labels you have):
@@ -28,6 +28,8 @@ CODE SECTIONS:
 Note running main() calls all six functions, so you can set up a time trigger for this script (e.g., mine runs every hour) and call only this function, and you'll run each of the others. For information about time triggers, see here: https://developers.google.com/apps-script/guides/triggers/installable#manage_triggers_manually.
 
 I think the time zones for the script are UTC, but I'm not quite sure. So, the whole today/tomorrow/past few days distinction will be a bit off, but I've never had an issue with it and haven't looked too much into making the script operate in my time zone. If you want to fix the time zone thing for yourself, this exchange might be a good starting point: https://stackoverflow.com/a/18597149.
+
+Also, there might be a few emails that slip through the cracks for some reason from time to time. I think it has something to do with whether you have multiple email addresses associated with your contact card or whether you moved the email threads into certain folders before someone replied to the thread again (making it pop up in your inbox again). I'm not quite sure. I've had only a few threads where this has been the case, so I haven't investigated this too much.
 */
 
 
