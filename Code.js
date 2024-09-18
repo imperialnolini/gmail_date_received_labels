@@ -10,7 +10,7 @@ LABELS TO HAVE IN GMAIL (or re-write this code for the labels you have):
   ..Received/Received today
   ..Received/Received yesterday
   ..Received/Received past few days
-Note there should be an outer label named "..Received" and three inner labels named "Received today", etc.
+Note there should be an outer label named "..Received" and three inner labels named "Received today", etc. I recommend color-coding the labels in Gmail so you can glance at your inbox and see when you received your most-recent messages.
 
 
 CODE SECTIONS:
