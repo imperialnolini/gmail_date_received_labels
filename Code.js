@@ -25,7 +25,7 @@ CODE SECTIONS:
   RECEIVED PAST FEW DAYS:
     received_few_days_ago() un-labels all already-labelled messages then does labelling for inbox's messages received or snoozed until between four days ago and three days ago
     received_few_days_ago_me() is tweaked version to catch emails I sent myself
-Note running main() calls all six functions, so you can set up a time trigger for this script (e.g., mine runs every fifteen minutes) and call only this function, and you'll run each of the others. For information about time triggers, see here: https://developers.google.com/apps-script/guides/triggers/installable#manage_triggers_manually.
+Note running main() calls all six functions, so you can set up a time trigger for this script (e.g., mine runs every hour) and call only this function, and you'll run each of the others. For information about time triggers, see here: https://developers.google.com/apps-script/guides/triggers/installable#manage_triggers_manually.
 
 I think the time zones for the script are UTC, but I'm not quite sure. So, the whole today/tomorrow/past few days distinction will be a bit off, but I've never had an issue with it and haven't looked too much into making the script operate in my time zone. If you want to fix the time zone thing for yourself, this exchange might be a good starting point: https://stackoverflow.com/a/18597149.
 
