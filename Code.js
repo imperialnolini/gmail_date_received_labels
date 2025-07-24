@@ -3,39 +3,43 @@ Adapted from https://www.gmass.co/blog/add-needs-reply-label/
 
 
 INSTRUCTIONS FOR PERSONALIZATION:
-Write your email inside the quotes where we define the my_email variable inside the definition of the main() function.
+In the main() function, replace YOUREMAILHERE with your email address. Importantly, write it inside the quotation marks -- the script won't work if you delete them.
 
 
 LABELS TO HAVE IN GMAIL (or re-write this code for the labels you have):
   ..Received/Received today
   ..Received/Received yesterday
   ..Received/Received past few days
-Note there should be an outer label named "..Received" and three inner labels named "Received today", etc. I recommend color-coding the labels in Gmail so you can glance at your inbox and see when you received your most-recent messages.
+Note there should be an outer label named "..Received" and three inner labels named "Received today", etc.
 
 
 CODE SECTIONS:
   RECEIVED TODAY:
     received_today() un-labels all already-labelled messages then does labelling for inbox's messages received or snoozed until today
-    received_today_me() is tweaked version of today to catch emails you sent yourself
+    received_today_me() is tweaked version of today to catch emails I sent myself
 
   RECEIVED YESTERDAY:
     received_yest() un-labels all already-labelled messages then does labelling for inbox's messages received or snoozed until yesterday
-    received_yest_me() is tweaked version of yest to catch emails you sent yourself
+    received_yest_me() is tweaked version of yest to catch emails I sent myself
 
   RECEIVED PAST FEW DAYS:
     received_few_days_ago() un-labels all already-labelled messages then does labelling for inbox's messages received or snoozed until between four days ago and three days ago
-    received_few_days_ago_me() is tweaked version to catch emails you sent yourself
-Note running main() calls all six functions, so you can set up a time trigger for this script (e.g., mine runs every hour) and call only this function, and you'll run each of the others. For information about time triggers, see here: https://developers.google.com/apps-script/guides/triggers/installable#manage_triggers_manually.
+    received_few_days_ago_me() is tweaked version to catch emails I sent myself
+Note running main() calls all six functions, so you can set up a time trigger for this script (e.g., mine runs every fifteen minutes) and call only this function, and you'll run each of the others. For information about time triggers, see here: https://developers.google.com/apps-script/guides/triggers/installable#manage_triggers_manually.
 
 I think the time zones for the script are UTC, but I'm not quite sure. So, the whole today/tomorrow/past few days distinction will be a bit off, but I've never had an issue with it and haven't looked too much into making the script operate in my time zone. If you want to fix the time zone thing for yourself, this exchange might be a good starting point: https://stackoverflow.com/a/18597149.
 
-Also, there might be a few emails that slip through the cracks for some reason from time to time. I think it has something to do with whether you have multiple email addresses associated with your contact card or whether you moved the email threads into certain folders before someone replied to the thread again (making it pop up in your inbox again). I'm not quite sure. I've had only a few threads where this has been the case, so I haven't investigated this too much.
+If you want to change how the labels are named -- rather than using my names, you can do so by renaming them in the functions, or you could create variables of strings of their names in the main() function and pass that into the received...() functions the way I pass in the my_email variable (though note you'll need to replace the parts of the strings where I wrote the names of the label variables by concatenating the truncated strings -- once you remove what I have written -- with your variable names). It's not too a hard fix... though I'll leave it to you.
+
+Also, if you want to further improve the code, you could make a function that does the substance of the unlabelling and relabeling then a function that calls that main function on the six received...() functions. Or maybe that would be the main() function. Up to you. And if you want to really improve it, you might look into whether you can parallelize any of it. I'm not sure whether Google Apps Script has that functionality, but if it does, that might be cool and would help with efficiency.
+
+All that said, I might implement these efficienty boosts and re-commit later... but to be determined.
 */
 
 
 
 function main() {
-  var my_email = "write_your_email_here"
+  var my_email = "YOUREMAILHERE"
 
   received_today()
   received_today_me(my_email)
